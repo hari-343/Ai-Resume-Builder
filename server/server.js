@@ -30,11 +30,14 @@ const startServer = async () => {
 startServer();
 
 // server/server.js
-const cors = require('cors');
+// ... existing imports at the top ...
+import cors from 'cors'; // ADD THIS IMPORT AT THE TOP
 
-// Replace this URL with your actual Vercel live URL once deployed
+// ... rest of your startServer code ...
+
+// ADD THIS AFTER YOUR startServer FUNCTION
 const corsOptions = {
-  origin: 'https://ai-resume-builder-frontend-cyan.vercel.app/', 
+  origin: 'https://ai-resume-builder-frontend-cyan.vercel.app', // Ensure this is your correct live URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };

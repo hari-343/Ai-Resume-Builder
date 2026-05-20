@@ -34,7 +34,7 @@ const cors = require('cors');
 
 // Replace this URL with your actual Vercel live URL once deployed
 const corsOptions = {
-  origin: 'https://your-project-name.vercel.app', 
+  origin: 'https://ai-resume-builder-frontend-cyan.vercel.app/', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 };

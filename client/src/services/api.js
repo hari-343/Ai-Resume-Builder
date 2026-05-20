@@ -2,6 +2,7 @@
 // api.js - Fetch Wrapper with Auth Token
 // ============================================
 // Reference: fetch(), async/await - reference-javascript.md
+import axios from 'axios';
 
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
@@ -51,5 +52,12 @@ const API = {
     method: 'DELETE',
   }),
 };
+
+const api = axios.create({
+  // If the app is on Vercel, it uses the environment variable
+  // If it's on your computer, it uses the empty string (which Vite's proxy handles)
+  baseURL: import.meta.env.VITE_API_URL || '', 
+});
+
 
 export default API;
